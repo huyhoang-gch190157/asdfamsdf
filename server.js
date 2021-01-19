@@ -2,19 +2,19 @@ var http = require('http'); // 1 - Import Node.js core module
 var url = require('url');
 
 var server = http.createServer(function (req, res) {   // 2 - creating server
-    if (req.url == '/') { //check the URL of the current request
+    if (req.url == '/Home') { //check the URL of the current request
         
         // set response header
         res.writeHead(200, { 'Content-Type': 'text/html' });  
         
         // set response content    
         res.write('<html><body><h1>This is home Page.</h1>');
-        res.write('<a href="student"> Student</a><br>');
+        res.write('<a href="Student"> Student</a><br>');
         res.write('<a href="Admin">Admin</a></body></html><br>');
         res.end();
     
     }
-    else if (req.url == "/student") {
+    else if (req.url == "/Student") {
         
         res.writeHead(200, { 'Content-Type': 'text/html' });
         res.write('<html><body><h1>This is student Page.</h1></body>');
@@ -23,7 +23,7 @@ var server = http.createServer(function (req, res) {   // 2 - creating server
         res.end();
     
     }
-    else if (req.url == "/admin") {
+    else if (req.url == "/Admin") {
         
         res.writeHead(200, { 'Content-Type': 'text/html' });
         res.write('<html><body><h1>This is admin Page.</h1></body>');
