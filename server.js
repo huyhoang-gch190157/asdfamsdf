@@ -9,8 +9,8 @@ var server = http.createServer(function (req, res) {   // 2 - creating server
         
         // set response content    
         res.write('<html><body><h1>This is home Page.</h1>');
-        res.write('<a href="http://localhost:5000/student"> Student</a><br>');
-        res.write('<a href="http://localhost:5000/admin">Admin</a></body></html><br>');
+        res.write('<a href="student"> Student</a><br>');
+        res.write('<a href="">Admin</a></body></html><br>');
         res.end();
     
     }
@@ -18,8 +18,8 @@ var server = http.createServer(function (req, res) {   // 2 - creating server
         
         res.writeHead(200, { 'Content-Type': 'text/html' });
         res.write('<html><body><h1>This is student Page.</h1></body>');
-        res.write('<a href="http://localhost:5000">Home</a><br>');
-        res.write('<a href="http://localhost:5000/admin">Admin</a></html><br>');
+        res.write('<a href="">Home</a><br>');
+        res.write('<a href="">Admin</a></html><br>');
         res.end();
     
     }
@@ -27,8 +27,8 @@ var server = http.createServer(function (req, res) {   // 2 - creating server
         
         res.writeHead(200, { 'Content-Type': 'text/html' });
         res.write('<html><body><h1>This is admin Page.</h1></body>');
-        res.write('<a href="http://localhost:5000/student">Student</a><br>');
-        res.write('<a href="http://localhost:5000">Home</a></html><br>');
+        res.write('<a href="">Student</a><br>');
+        res.write('<a href="">Home</a></html><br>');
         res.end();
     
     }
